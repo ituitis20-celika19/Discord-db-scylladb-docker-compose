@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  scylladb:
+    image: scylladb/scylla
+    container_name: some-scylla
+    environment:
+      - SCYLLA_CLUSTER_NAME=mycluster
+      - SCYLLA_SEEDS=seed1,seed2
+    ports:
+      - "9042:9042"
+      - "9160:9160"
+      - "8080:8080"  
